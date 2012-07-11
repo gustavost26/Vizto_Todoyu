@@ -1,0 +1,9 @@
+Files in the lib/ folder should NOT be modified!
+They may be replaced by an update of a library.
+But sometimes it's necessary:
+
+The following changes have been made:
+
+# lib/php/dwoo/plugins/builtin/functions/truncate.php
+Replaced substr() and strlen() with multibyte versions.
+Added utf-8 as encoding. Supports now truncating of asian (japanese) characters.
