@@ -370,7 +370,7 @@ class TodoyuDateRange {
 	/**
 	 * Set limit for end date
 	 * If end date exceeds the limit, it will be adjusted
-	 * The limit doesn't affect later operations
+	 * The limit does not affect later operations
 	 *
 	 * @param	Integer		$dateEnd
 	 */
@@ -387,7 +387,7 @@ class TodoyuDateRange {
 	/**
 	 * Set limit for start date
 	 * If start date exceeds the limit, it will be adjusted
-	 * The limit doesn't affect later operations
+	 * The limit does not affect later operations
 	 *
 	 * @param	Integer		$dateStart
 	 */

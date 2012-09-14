@@ -571,7 +571,7 @@ class TodoyuDatabase {
 
 
 	/**
-	 * Get a record by query. It hasn't to be a "record", its just a single row result
+	 * Get record by query. It has not to be a "record", it's just a single row result
 	 *
 	 * @param	String		$fields
 	 * @param	String		$table
@@ -618,7 +618,7 @@ class TodoyuDatabase {
 
 
 	/**
-	 * Check if a record exists in a table
+	 * Check whether a record exists in a table
 	 *
 	 * @param	String		$table
 	 * @param	Integer		$idRecord
@@ -649,11 +649,6 @@ class TodoyuDatabase {
 	 */
 	public function getColumn($field, $table, $where = '', $groupBy = '', $orderBy = '', $limit = '', $resultFieldName = '', $indexField = '') {
 		$fields	= $field;
-
-			// If an index field is used, it have to be selected too in the
-//		if( $indexField !== '' ) {
-//			$fields .= ',' . $indexField;
-//		}
 
 		$rows	= $this->getArray($fields, $table, $where, $groupBy, $orderBy, $limit);
 		$key	= $resultFieldName === '' ? $field : $resultFieldName;
@@ -723,7 +718,7 @@ class TodoyuDatabase {
 
 
 	/**
-	 * The the value of a single field.
+	 * Get value of one single field (and row).
 	 * The query should limit the result rows to 1 (all others are ignored anyway)
 	 *
 	 * @param	String		$field					Field the fetch
