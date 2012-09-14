@@ -635,7 +635,7 @@ class TodoyuDatabase {
 
 
 	/**
-	 * Get a column from database
+	 * Get value of given field column from database. Can be values of multiple rows.
 	 *
 	 * @param	String		$field						Single field to select
 	 * @param	String		$table						Table
