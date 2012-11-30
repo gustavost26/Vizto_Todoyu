@@ -210,6 +210,10 @@ Todoyu::$CONFIG['FE']['PAGE']['assets'] = array(
 			'position'	=> 65
 		),
 		array(
+			'file'		=> 'core/asset/js/FormValidator.js',
+			'position'	=> 65
+		),
+		array(
 			'file'		=> 'core/asset/js/Validate.js',
 			'position'	=> 66
 		),
@@ -496,10 +500,6 @@ Todoyu::$CONFIG['FE']['PAGE']['assets'] = array(
 		),
 		array(
 			'file'		=> 'core/asset/css/listscrollloader.scss',
-			'position'	=> 10
-		),
-		array(
-			'file'		=> 'core/asset/css/compatibility/ie8.scss',
 			'position'	=> 10
 		)
 	)

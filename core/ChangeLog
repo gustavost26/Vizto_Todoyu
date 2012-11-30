@@ -1,6 +1,14 @@
 todoyu core changelog
 
 core 2.3.0 - not released yet
+	* Added: Basic style for warning messages
+	* Added: Possibility to add custom live-validator
+	* Added: Basics for live-validation for form-fields
+	* Bugfix: Fixed linux-chrome-styling-bug
+	* Changed: Adapted form.xsd
+	* Bugfix: Min - form - validator was wrong
+	* Bugfix: Fixed e-mail parsing
+	* Bugfix: Removed boundaries of sub menu entries
 	* Bugfix: Add tab key as class name for content item tabs
 	* Bugfix: Active item tabs are unique
 	* Bugfix: Auto linking found also background image source as link
@@ -9,7 +17,9 @@ core 2.3.0 - not released yet
 	* Bugfix: Class for fieldset didn't work properly/clean
 	* Bugfix: isRequired() checks now for available field and for false value
 	* Bugfix: Content tab did not store selected tab correctly
+	* Added: TodoyuTime::getTimePartsDHMS()
 	* Added: Todoyu.String.replaceAll()
+	* Added: TodoyuHookManager::getHooks can now also get hooks anonymously (w/o name)
 	* Added: Form element time was not available
 	* Added: Todoyu.Form.isFirstInputInForm()
 	* Added: TodoyuFormElement::removeAttribute()
@@ -52,6 +62,7 @@ core 2.3.0 - not released yet
 	* Added: TodoyuDebug::getBacktrace()
 	* Added: Todoyu.ListScrollLoader()
 	* Added: class TodoyuTimezoneManager
+	* Added: Set timezone in database for date calculations
 	* Changed: Sticky notification mode: info now stays (was: stays 15s)
 	* Changed: extracted select-group-options from template
 	* Changed: Renamed TodoyuArray::prefix() to prefixValues()
