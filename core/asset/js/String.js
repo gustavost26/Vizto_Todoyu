@@ -40,7 +40,7 @@ Todoyu.String = {
 	 * @return	{String}
 	 */
 	replaceAll: function(txt, search, replace) {
-		return txt.replace(new RegExp(search, 'g'), replace);
+	  return txt.replace(new RegExp(search, 'g'), replace);
 	},
 
 
