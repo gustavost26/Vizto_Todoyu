@@ -1,6 +1,12 @@
 todoyu core changelog
 
 core 2.3.0 - not released yet
+	* Bugfix: SearchList-input value clearing disabled text-navigation
+	* Bugfix: Fixed bug in the assistNumericInput method
+	* Bugfix: Changed date-format for calendar week to ISO-8601
+	* Changed: Encoding of title in header-template is now optional
+	* Changed: Set default error - logging on error instead of debug
+	* Added: Accept exclamation mark in link parsing
 	* Added: Basic style for warning messages
 	* Added: Possibility to add custom live-validator
 	* Added: Basics for live-validation for form-fields
