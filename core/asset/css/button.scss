@@ -9,7 +9,7 @@ button {
 	color:$colorTextGeneral;
 	cursor:pointer;
 	padding:0px;
-	background:$white url('../img/bg-button-css3.png') repeat-x 0 50%;
+	@include gradient-button;
 	border:1px solid $colorNeutral04;
 	border-radius:13px;
 

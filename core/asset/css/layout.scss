@@ -78,26 +78,28 @@ body {
 	height:13px;
 }
 
-#right span.lt {
-	display:none; }
+#right span {
+	&.lt {
+		display:none; }
+
+	&.rt {
+		top:0px;
+		right:0px;
+		background-position:100% 0; }
+
+	&.lb {
+		bottom:0px;
+		left:0px;
+		background-position:0 100%; }
+
+	&.rb {
+		bottom:0px;
+		right:0px;
+		background-position:100% 100%; }
+}
 
 #todoyu-loginpage #right span.lt {
 	display:block; }
-
-#right span.rt {
-	top:0px;
-	right:0px;
-	background-position:100% 0; }
-
-#right span.lb {
-	bottom:0px;
-	left:0px;
-	background-position:0 100%; }
-
-#right span.rb {
-	bottom:0px;
-	right:0px;
-	background-position:100% 100%; }
 
 #content {
 	padding:1px;
@@ -149,7 +151,15 @@ body {
 	left:0px;
 	width:100%;
 	height:5px;
-	background:$colorApprove01 url(../img/bg-footer.png) repeat-y 0 top; }
+	background: #122a4c; /* Old browsers */
+	background: -moz-linear-gradient(left, #122a4c 0%, #3db8bf 50%, #7bc75b 75%, #afd027 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#122a4c), color-stop(21%,#7bc75b), color-stop(50%,#3db8bf), color-stop(75%,#7bc75b), color-stop(100%,#afd027)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #122a4c 0%,#3db8bf 50%,#7bc75b 75%,#afd027 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #122a4c 0%,#3db8bf 50%,#7bc75b 75%,#afd027 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #122a4c 0%,#3db8bf 50%,#7bc75b 75%,#afd027 100%); /* IE10+ */
+	background: linear-gradient(to right, #122a4c 0%,#3db8bf 50%,#7bc75b 75%,#afd027 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#122a4c', endColorstr='#afd027',GradientType=1 ); /* IE6-9 */
+}
 
 
 
@@ -165,11 +175,13 @@ body {
 
 	h1 {
 		height:26px;
-		background: {
-			image:url(../img/bg-headers.png);
-			repeat:no-repeat;
-			position:0 -60px; /* allowedOpen open  */
+		@include gradient-header;
+		border: {
+			radius:5px 5px 0 0;
+			top:1px solid $colorNeutral02;
+			bottom:1px solid $white;
 		}
+
 		margin:0px;
 		padding:0px;
 		cursor:pointer;
@@ -357,7 +369,8 @@ label.toggleSelect {
 	background-color:$colorCorporate01; }
 
 .bcg05 {
-	background-color:$colorNeutral01; }
+	background-color:$colorNeutral01;
+}
 
 .bcg06 {
 	background-color:$colorNeutral07; }

@@ -126,7 +126,12 @@ div.infoBox {
 }
 
 .headerLine {
-	background:url('../img/bg-headerline.png') repeat-x 0 0;
+	@include gradient-header;
+	border: {
+		radius:5px 5px 0 0;
+		top:1px solid $colorNeutral02;
+		bottom:1px solid $white;
+	}
 
 	label {
 		text-transform:uppercase;
@@ -149,18 +154,13 @@ div.infoBox {
 		line-height:20px; }
 }
 
-.headerOptLine {
-	background:url('../img/bg-headerline.png') repeat-x 0 -46px;
-	border-color:$colorCorporate04; }
-
 .headerLine span,
 .button {
 	text-shadow:1px 1px $colorNeutral01; }
 
 h1.headerLine {
 	.hasIcon {
-		padding-left:2px;
-	}
+		padding-left:2px; }
 
 	span{
 		float:left;
@@ -174,6 +174,9 @@ h1.headerLine {
 			margin:0px;
 			padding:0 0 0 15px; }
 	}
+
+	&.noPadLeft span.title {
+		padding-left:0; }
 }
 
 /* table header */
@@ -182,7 +185,8 @@ tr.headerLine {
 	background:none;
 
 	th {
-		background:url('../img/bg-headerline.png') repeat-x 0 0;
+		@include gradient-header;
+
 		border: {
 			top:1px solid $colorNeutral02;
 			bottom:1px solid $white;
