@@ -96,22 +96,67 @@ Todoyu.Ajax.Responders = {
 	 * @param	{Ajax.Request}	request
 	 */
 	onCreate: function(request, xhr) {
-		if( Todoyu.Headlets.isHeadlet('todoyuheadletajaxloader') ) {
-			Todoyu.Headlets.getHeadlet('todoyuheadletajaxloader').active();
-		}
+		Todoyu.Ajax.startSpinner();
 
-		var oldRespondToReadyState = request.respondToReadyState;
+		var originalMethod 	= request.respondToReadyState,
+			that			= this;
+
 		request.respondToReadyState = function(readyState) {
-			var state	= Ajax.Request.Events[readyState];
-			var response= new Ajax.Response(this);
+			var state	= Ajax.Request.Events[readyState],
+				response= new Ajax.Response(this);
 
 				// Call onComplete hooks
-			if( state == 'Complete' ) {
+			if( state === 'Complete' ) {
+				if( that.hasPhpFatalError(response) ) {
+					that.handlePhpFatalError(response);
+				}
+
 				Todoyu.Ajax.Responders.callOnCompleteHooks(response);
 			}
 
-			oldRespondToReadyState.call(response.request, readyState);
+			originalMethod.call(response.request, readyState);
 		};
+	},
+
+
+
+	/**
+	 * Check whether response contains fatal php error message
+	 *
+	 * @param	{Ajax.Response}		response
+	 * @returns	{Boolean}
+	 */
+	hasPhpFatalError: function(response) {
+		if( response.responseText ) {
+			if( response.responseText.indexOf("class='xdebug-error") !== -1 ) { // error with xdebug
+				if( response.responseText.indexOf('Call Stack') !== -1 && response.responseText.indexOf("<font size='1'>") !== -1) { // second check to prevent false positives
+					return true;
+				}
+			}
+			if( response.responseText.indexOf('<b>Parse error</b>:') !== -1 ) { // php error (no xdebug)
+				if( response.responseText.indexOf('<br />') !== -1 ) {
+					return true;
+				}
+			}
+		}
+
+		return false;
+	},
+
+
+
+	/**
+	 * Handle php fatal error
+	 *
+	 * @param	{Ajax.Response}		response
+	 */
+	handlePhpFatalError: function(response) {
+		var message	= '[LLL:core.global.fatalErrorMessage]';
+
+		Todoyu.notifyError(message, 'phpFatalError');
+		Todoyu.log(message);
+
+		Todoyu.Ajax.stopSpinner();
 	},
 
 
@@ -127,11 +172,7 @@ Todoyu.Ajax.Responders = {
 		this.scrollToElement(response);
 
 			// If no more requests are running, stop spinner
-		if( Ajax.activeRequestCount < 1 ) {
-			if( Todoyu.Headlets.isHeadlet('todoyuheadletajaxloader') ) {
-				Todoyu.Headlets.getHeadlet('todoyuheadletajaxloader').inactive();
-			}
-		}
+		Todoyu.Ajax.stopSpinner();
 	},
 
 
