@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="legend.basics">Anhang</label>
+	<label index="legend.inlineAssetUpload">Dateien an diese Aufgabe anhängen</label>
+	<label index="assets.button.delete">Ausgewählte Datei löschen</label>
+	<label index="assets.button.upload">Neue Datei anfügen</label>
+</labels>

@@ -1,0 +1,213 @@
+@import "../../../../core/config/theme.scss";
+
+
+
+/* ---------------------
+	Container
+------------------------ */
+#daytracks-history {
+	margin:5px;
+	text-align:left;
+
+	form {
+		select {
+			width:140px;
+		}
+	}
+
+	.selectors {
+		.floatLeft label {
+			line-height:18px;
+		}
+
+		.toggleDetails {
+			margin-left:5px;
+
+			a {
+				padding:0;
+
+				&.close {
+					background:transparent url(../img/icons.png) no-repeat 0 -30px;
+				}
+
+				&.open {
+					background:transparent url(../img/icons.png) no-repeat 0 -60px;
+				}
+			}
+		}
+
+		#showtracksdetails {
+			top:2px;
+		}
+	}
+}
+
+#daytracks-history .detailsToggle,
+#daytracks-history .detailsToggle * {
+	cursor:pointer;
+}
+
+
+
+/* ---------------------
+	Button icons
+------------------------ */
+button.daytracksexpand .icon {
+	background:transparent url(../img/icons.png) no-repeat 0 -60px !important;
+}
+
+button.daytrackscollapse .icon {
+	background:transparent url(../img/icons.png) no-repeat 0 -30px !important;
+}
+
+
+
+/* ----------------------
+	Month info box
+   ---------------------- */
+.monthInfo {
+	padding:5px;
+	margin:0 0 8px 0;
+	background-color:$white;
+
+	dt {
+		float:left;
+		width:110px;
+	}
+
+	dd {
+		float:left;
+		width:110px;
+	}
+}
+
+
+
+/* ---------------------
+	Tracks
+------------------------ */
+#daytracks-history-trackings {
+	margin:10px 0;
+	padding-bottom:5px;
+	border:0 solid #bababa;
+
+	h1 {
+		background-color:$colorNeutral01;
+		border:1px solid $colorNeutral02;
+		border-left:none;
+		border-right:none;
+
+		&.monthTotal,
+		&.cwTotal {
+			padding:5px 0 5px 10px;
+			font-weight:bold;
+		}
+
+		&.cwTotal {
+			border:none;
+			text-align:right;
+		}
+	}
+
+	.details {
+		a:hover div {
+			background-color:$colorHighlight04;
+		}
+
+		div.daytrackdetail.deleted {
+			background-color:$colorNeutral00;
+
+			* {
+				color:$colorNeutral07;
+			}
+		}
+	}
+
+	.daytrack.toggled {
+		background-color:$colorNeutral01;
+		text-transform:uppercase;
+		letter-spacing:1px;
+	}
+}
+
+#daytracks-history-trackings .details div,
+#daytracks-history-trackings .daytrack {
+	background-color:$white;
+	border: {
+		color:$colorNeutral02;
+		style:solid;
+		width:0 0 1px 0;
+	}
+	padding:5px;
+	text-align:left;
+}
+
+#daytracks-history-trackings .details div .daytrackdetail.last,
+#daytracks-history-trackings .daytrack.last,
+.daytrackdetail.last {
+	border-bottom:none!important;
+}
+
+
+
+span.daytrackDate {
+	display:inline-block;
+	width:150px;
+	padding:0 20px 0 20px;
+	text-align:right;
+}
+
+.toggled span.daytrackDate {
+	width:auto;
+}
+
+span.daytrackHours,
+.daytrackdetail .tasktitle,
+.daytrackdetail .time,
+.daytrackdetail .cw,
+span.daytrackCW {
+	padding-left:15px;
+}
+
+span.daytrackHours {
+	padding-left:20px;
+}
+
+#daytracks-history-trackings {
+	.daytrackdetail span{
+		&.task {
+			text-align:left;
+
+			span{
+				&.tasknumber {
+					width:60px;
+					display:inline-block;
+					text-align:right;
+					vertical-align:top;
+				}
+
+				&.tasktitle {
+					width:330px;
+					padding-right:10px;
+					display:inline-block;
+					vertical-align:top;
+				}
+			}
+		}
+
+		&.time {
+			width:80px;
+			display:inline-block;
+			text-align:right;
+		}
+	}
+
+	.toggled {
+		//margin-top:5px;
+		border-width:1px 0;
+	}
+
+	.total {
+		border-style:solid;
+	}
+}
