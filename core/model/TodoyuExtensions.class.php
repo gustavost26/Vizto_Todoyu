@@ -284,8 +284,8 @@ class TodoyuExtensions {
 
 		// Check if a config in core is available
 		$coreConf = PATH_CONFIG.'/'.$type.'.php';
-		if(is_file($coreConf)) {
-			require_once($coreConf);
+		if(is_readable($coreConf)) {
+			include_once($coreConf);
 		}
 	}
 
