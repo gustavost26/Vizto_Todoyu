@@ -297,7 +297,7 @@ class TodoyuFileManager {
 	public static function isFile($path) {
 		$path = self::pathAbsolute($path);
 
-		return is_readable($path);
+		return is_file($path);
 	}
 
 	/**
