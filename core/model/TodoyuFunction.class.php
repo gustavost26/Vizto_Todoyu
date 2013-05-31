@@ -91,6 +91,8 @@ class TodoyuFunction {
 			return function_exists($funcRefString);
 		} else {
 			$parts = explode('::', $funcRefString);
+			//增加这行避免500错误?!?!?!?!?
+			TodoyuDebug::printInFirebug($funcRefString, __FUNCTION__, 'admin');
 
 			return method_exists($parts[0], $parts[1]);
 		}

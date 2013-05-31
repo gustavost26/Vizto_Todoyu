@@ -146,7 +146,6 @@ class TodoyuExtensions {
 	public static function getExtInfo($extKey) {
 		self::loadConfig($extKey, 'extinfo');
 		self::setDefaultDocumentationLink($extKey);
-
 		if(is_array(Todoyu::$CONFIG['EXT'][$extKey]['info'])) {
 			return Todoyu::$CONFIG['EXT'][$extKey]['info'];
 		} else {
@@ -163,7 +162,6 @@ class TodoyuExtensions {
 	 */
 	public static function getExtVersion($extKey) {
 		$info = self::getExtInfo($extKey);
-
 		if(!$info) {
 			return FALSE;
 		} else {
@@ -179,7 +177,6 @@ class TodoyuExtensions {
 	public static function getAllExtInfo() {
 		$extensions = self::getInstalledExtKeys();
 		$infos      = array();
-
 		foreach($extensions as $ext) {
 			$infos[$ext] = self::getExtInfo($ext);
 		}
@@ -198,7 +195,8 @@ class TodoyuExtensions {
 	public static function loadConfig($extKey, $type) {
 		if(!isset(self::$loadedExtConfigTypes[$extKey.$type])) {
 			$pathConfig = 'ext/'.$extKey.'/config/'.$type.'.php';
-
+			//增加这条代码居然可以令500错误去除？！？！？
+			TodoyuDebug::printInFirebug($pathConfig, __FUNCTION__, 'admin');
 			// Attempt load given config
 			if(self::isPathInExtDir($extKey, $pathConfig) && TodoyuFileManager::isFile($pathConfig)) {
 				// Load config file
@@ -276,12 +274,13 @@ class TodoyuExtensions {
 	 * @param    String $type
 	 */
 	public static function loadAllTypeConfig($type) {
-		$extKeys = self::getInstalledExtKeys();
-
+		$extKeys     = self::getInstalledExtKeys();
+		$debugString = '';
 		foreach($extKeys as $extKey) {
+			$debugString .= $extKey.'  ';
 			self::loadConfig($extKey, $type);
 		}
-
+		//exit($debugString);
 		// Check if a config in core is available
 		$coreConf = PATH_CONFIG.'/'.$type.'.php';
 		if(is_readable($coreConf)) {
@@ -461,13 +460,10 @@ class TodoyuExtensions {
 	 */
 	public static function getDependents($extKeyToCheck) {
 		self::loadAllExtinfo();
-
 		$dependents = array();
 		$extKeys    = self::getInstalledExtKeys();
-
 		foreach($extKeys as $extKey) {
 			$dependInfo = Todoyu::$CONFIG['EXT'][$extKey]['info']['constraints']['depends'];
-
 			if(is_array($dependInfo)) {
 				if(array_key_exists($extKeyToCheck, $dependInfo)) {
 					$dependents[] = $extKey;
