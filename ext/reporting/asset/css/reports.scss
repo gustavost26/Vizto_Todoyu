@@ -1,0 +1,25 @@
+.reportTypeTimetracking {
+	.results {
+		.result {
+			&.typeTable {
+				margin-right:20px;
+				float:left;
+				clear:none;
+			}
+
+			&.resultViewAllpersonsratiotable {
+				clear:both;
+			}
+
+			&.resultViewAllpersonsratiochart {
+				clear:both;
+			}
+		}
+	}
+}
+
+.reportTypeTyperatio {
+	h1.headerLine {
+		margin-bottom:0;
+	}
+}

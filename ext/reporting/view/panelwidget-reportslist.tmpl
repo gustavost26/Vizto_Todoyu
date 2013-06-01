@@ -1,0 +1,33 @@
+{select options=$reportTypes id="panelwidget-reportslist-select" size=1}
+
+{Button label="reporting.panelwidget-reportslist.saveAsNew" onclick="Todoyu.Ext.reporting.PanelWidget.ReportsList.saveAsNewReport()"}
+{Button label="reporting.panelwidget-reportslist.saveCurrent" onclick="Todoyu.Ext.reporting.PanelWidget.ReportsList.saveCurrent()"}
+
+<ul id="reports-list" class="reportsList sortablePanelList">
+{foreach $reports type reportType}
+	<li class="listItem groupTitle groupName{ucfirst $type}">{$reportType.label} ({sizeof($reportType.reports)})</li>
+	<li class="itemList" {if !$reportType.expanded}style="display:none"{/if}>
+		<ul class="sortable" id="reports-list-{$type}">
+		{foreach $reportType.reports report}
+			<li id="report_{$report.id}" class="listItem {cycle values='odd,even'}">
+				<div id="report-{$report.id}-handle" class="handle"></div>
+				<a id="report-{$report.id}-label" class="title" onclick="Todoyu.Ext.reporting.PanelWidget.ReportsList.openReport({$report.id})" href="javascript:void(0)" title="{htmlencode $report.title}">
+					{htmlencode(truncate($report.title,25))}
+				</a>
+				<span class="actions">
+					<a id="report-{$report.id}-control-rename" onclick="Todoyu.Ext.reporting.PanelWidget.ReportsList.renameReport({$report.id})" class="rename" title="{Label core.global.rename}" href="javascript:void(0)">
+						{Label core.global.rename}
+					</a>
+					<a id="report-{$report.id}-control-save" onclick="Todoyu.Ext.reporting.PanelWidget.ReportsList.saveReport({$report.id}, '{$groupKey}')" class="save" title="{Label core.global.save}" href="javascript:void(0)">
+						{Label core.global.save}
+					</a>
+					<a id="report-{$report.id}-control-delete" onclick="Todoyu.Ext.reporting.PanelWidget.ReportsList.deleteReport({$report.id})" class="delete" title="{Label core.global.delete}" href="javascript:void(0)">
+						{Label core.global.delete}
+					</a>
+				</span>
+			</li>
+		{/foreach}
+		</ul>
+	</li>
+{/foreach}
+</ul>

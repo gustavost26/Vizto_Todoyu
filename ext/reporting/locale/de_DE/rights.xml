@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="general.use">Sieht/darf verwenden Report Funktionialität</label>
+	<label index="general.area">Zugriff auf Report Bereich</label>
+	<label index="report">Verwende Reports</label>
+	<label index="report.workloadperproject">Arbeitsaufwand pro Projekt</label>
+	<label index="report.timetracking">Zeiterfassung</label>
+	<label index="general">Generelle Einstellungen</label>
+	<label index="report.estimatedtracked">Geschätzte vs. erfasste Zeit</label>
+</labels>

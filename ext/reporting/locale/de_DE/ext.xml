@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Reporting Framework</label>
+	<label index="page.title">Reporting</label>
+	<label index="report">Report</label>
+	<label index="tab.label">Reports</label>
+	<label index="noReportsOpen.info">Zur Zeit sind keine Reports geöffnet</label>
+	<label index="noReportsOpen.instruction">Bitte wählen Sie einen Report aus der Liste oder erstellen Sie einen neuen im Panelwidget</label>
+	<label index="estimated">Geschätzt</label>
+	<label index="tracked">Erfasst</label>
+	<label index="internal">Intern</label>
+	<label index="external">Extern</label>
+	<label index="ratio">Verhältnis</label>
+	<label index="percent">Prozent</label>
+	<label index="total">Total</label>
+	<label index="resultView.noData">Es bestehen keinen verwendbaren Daten für diese Darstellung. Bitte ändern Sie Ihre Filter Einstellung.</label>
+	<label index="resultView.requirementNotSet">Die Anforderungen für diesen Filter sind noch nicht erfüllt. Bitte wählen Sie zuerst einen der Filter oben.</label>
+	<label index="resultView.notEnoughInformation">Nicht genügend Informationen um Resultate darstellen zu können.</label>
+	<label index="filter.internalProjects">Interne Projekte</label>
+	<label index="filter.filterset.task">Aufgaben Filter Set</label>
+	<label index="filter.filterset.project">Projekt Filter Set</label>
+	<label index="filter.timerange">Zeitabschnitt</label>
+	<label index="filter.internalPersons">Interne Personen</label>
+	<label index="selection">Auswahl</label>
+	<label index="average">Durchschnitt</label>
+	<label index="new">Neu</label>
+	<label index="pleaseWait">todoyu berechnet gerade die Daten für den Report.</label>
+	<label index="refreshReport">Report neu laden</label>
+</labels>

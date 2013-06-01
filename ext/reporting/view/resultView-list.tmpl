@@ -1,0 +1,9 @@
+{foreach $resultViews resultView}
+	<div class="result {implode(' ', $resultView.classes)} resultView{ucfirst $resultView.name}" id="report-{$idReport}-result-{$resultView.name}">
+		<div class="label">
+			<span class="text">{$resultView.title}</span>
+			<div class="extra">{$resultView.labelExtra}</div>
+		</div>
+		{$resultView.content}
+	</div>
+{/foreach}

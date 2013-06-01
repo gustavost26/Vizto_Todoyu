@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Rozšíření pro vývojáře</label>
+	<label index="extconf.is_dev">This is a DEV installation</label>
+	<label index="headlet.info.cache">Cache</label>
+	<label index="headlet.info.cache.clear">Smazat všechny soubory v cache</label>
+	<label index="headlet.info.extids">ID rozšíření</label>
+	<label index="headlet.info.extids.show">Zobrazit ID rozšíření</label>
+	<label index="headlet.info.installer">Instalátor</label>
+	<label index="headlet.info.installer.activate">Povolit &amp; spustit instalátor</label>
+	<label index="headlet.info.is_admin">Správce?</label>
+	<label index="headlet.info.login">Přihlásit se jako</label>
+	<label index="headlet.info.name">Jméno</label>
+	<label index="headlet.info.prefs">Smazat nastavení</label>
+	<label index="headlet.info.rendertime">Čas vygenerování stránky</label>
+	<label index="headlet.info.session">Relace</label>
+	<label index="headlet.info.session.show">Zobrazit data relace</label>
+	<label index="headlet.info.show">Zobrazit</label>
+	<label index="headlet.info.switchBack">Vrátit se zpět</label>
+	<label index="headlet.info.switchBack.button">Vrátit se zpět na svého uživatele</label>
+	<label index="headlet.info.user">Uživatelské jméno</label>
+	<label index="headlet.simulatesessiontimeout.button">Simulovat vypršení doby sezení</label>
+	<label index="info.switchedBack">Vrátili jste se do svého profilu</label>
+	<label index="loading">Nahrávám...</label>
+	<label index="noCompany">Není přiřazen v žádné společnosti</label>
+	<label index="noRole">Nepřiřazena žádná role</label>
+	<label index="notify.cachecleared">Cache smazána</label>
+	<label index="notify.enableinstallerfailed">Povolení instalátoru se nezdařilo.</label>
+	<label index="notify.personPreferencesDeleted">Všechna nastavení této osoby byla smazána</label>
+	<label index="notify.simulateNoAccessRedirect">Protože simulovaný uživatel není admin, budete přesměrováni na portál</label>
+	<label index="notify.simulateReload">Po obnovení stránky budete přihlášeni jako %s. Buďte opatrní! Použijte dev rozšíření pro přepnutí se zpět.</label>
+	<label index="persons.external">Externí uživatelé</label>
+	<label index="persons.internal">Interní uživatelé</label>
+	<label index="rerouteEmail">Přesměrování e-mailu</label>
+	<label index="rerouteEmail.error">E-mailová adresa je chybná, zadejte ji prosím znovu.</label>
+	<label index="rerouteEmail.info">Odeslané e-maily jsou odesílány na tuto adresu. Jestliže je prázdné - pošta se nepřesměrovává. Nastavení je platné pouze pro jednotlivého uživatele ne pro všechny.</label>
+	<label index="rerouteEmail.info.cleared">Přesměrování e-mailu není aktivní (nebyl zadám žádný e-mail).</label>
+	<label index="rerouteEmail.subjectPrefix">PŘESMĚROVANÝ E-MAIL (todoyu DEV)</label>
+	<label index="rerouteEmail.success">Adresa pro přesměrování e-mailu byla změněna.</label>
+	<label index="show.errorLog">Záznam chyb</label>
+	<label index="show.installedExtensions">Informace o nainstalovaných rozšířeních</label>
+	<label index="show.sessionData">Data sezení</label>
+	<label index="tab">Vývojový Server!</label>
+</labels>

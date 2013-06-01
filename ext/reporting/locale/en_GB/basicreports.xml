@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="workloadPerProject">Workload Per Project</label>
+	<label index="workloadPerProject.view.Percentage">Percentage per project - chart</label>
+	<label index="workloadPerProject.view.SummaryPie">Total workload per project - chart</label>
+	<label index="workloadPerProject.view.detailsPerProject">Details Per Project</label>
+	<label index="timetracking">Tracking Per Person</label>
+	<label index="timetracking.view.PersonDetails">Details for</label>
+	<label index="timetracking.view.AllPersonRatios">Ratios of all persons</label>
+	<label index="timetracking.view.AllPersonRatiosChart">Ratios of all persons - chart</label>
+	<label index="timetracking.view.TrackingsBySelection">Tracked hours for selected projects - chart</label>
+	<label index="timetracking.view.TrackingsBySelection.totalForAll">Total For All</label>
+	<label index="timetracking.requirement.person">At least one person (or job type) have to be selected</label>
+	<label index="timetracking.requirement.project">At least one project (or company or filter set) have to be selected</label>
+	<label index="estimatedTracked">Estimated vs. Tracked</label>
+	<label index="estimatedTracked.view.summaryPie">Ratio of estimated and tracked time - chart</label>
+	<label index="estimatedTracked.view.OvertimeBars">Estimated / Tracked Time - chart</label>
+	<label index="estimatedTracked.view.OvertimeBars.overtime">Overtime</label>
+	<label index="estimatedTracked.view.OvertimeBars.timeLeftOver">Time Left Over</label>
+	<label index="estimatedTracked.view.OvertimeBars.timeInRange">Tracked In Range</label>
+	<label index="estimatedTracked.view.TaskDetails">Details Per Task</label>
+	<label index="estimatedTracked.view.TaskDetails.diff">Difference</label>
+	<label index="number">Number</label>
+	<label index="customer">Customer</label>
+	<label index="project">Project</label>
+</labels>

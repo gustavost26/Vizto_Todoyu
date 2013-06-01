@@ -1,0 +1,12 @@
+@import "../../../../core/config/theme.scss";
+
+form.inlineFilters {
+	.filter.inactive {
+		border-color:$colorNeutral01;
+
+		div {
+			color:$colorNeutral03;
+			opacity:0.5;
+		}
+	}
+}

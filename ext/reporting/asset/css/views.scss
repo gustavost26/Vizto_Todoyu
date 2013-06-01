@@ -1,0 +1,13 @@
+@import "../../../../core/config/theme.scss";
+
+
+
+.report .results .resultViewTaskdetails span {
+	&.neg {
+		color:$colorApprove05;
+	}
+	&.pos {
+		color:$colorAlert01;
+		font-weight:bold;
+	}
+}

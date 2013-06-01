@@ -1,0 +1,6 @@
+Dev Extension - PHP Hooks
+==========================
+
+#dev.headlet.infos
+	Data modifier hook when fetching infos for dev headlet
+	@param	Array		$info		Render data

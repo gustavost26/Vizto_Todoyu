@@ -1,0 +1,11 @@
+#overflow-window-session,
+#overflow-window-extids {
+	white-space:pre;
+	text-align:left;
+	overflow:scroll;
+	font-family:$fontFamilyCode;
+}
+
+#overflow-window-extids td {
+	padding:0 20px 0 0;
+}

@@ -1,0 +1,4 @@
+{timerange id=$htmlID name=$name range=$range nameWrap='filter'}
+<script type="text/javascript">
+Todoyu.Ext.reporting.Filter.addTimerange('{$idReport}', '{$htmlID}', [{$range.start*1000}, {$range.end*1000}], [{$dates.start*1000},{$dates.end*1000}], { dateFormat:'{Label core.dateformat.date}'});
+</script>

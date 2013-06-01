@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="title">Meine Reports</label>
+	<label index="saveAsNew">Als neuen Report speichern</label>
+	<label index="saveCurrent">Speichere Report</label>
+	<label index="newReportName">Name des Reports</label>
+	<label index="overwriteReport">Report überschreiben?</label>
+	<label index="deleteReport">Diesen Report löschen?</label>
+	<label index="save.alert.noReport">Es ist kein Report geöffnet.</label>
+</labels>

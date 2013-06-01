@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="workloadPerProject">Množství práce na projektu</label>
+	<label index="workloadPerProject.view.Percentage">Procentuálně na projekt - graf</label>
+	<label index="workloadPerProject.view.SummaryPie">Celkové množství práce na projekt - graf</label>
+	<label index="workloadPerProject.view.detailsPerProject">Detaily pro jednotlivé projekty</label>
+	<label index="timetracking">Sledování na osobu</label>
+	<label index="timetracking.view.PersonDetails">Detaily pro</label>
+	<label index="timetracking.view.AllPersonRatios">Poměry všech osob</label>
+	<label index="timetracking.view.AllPersonRatiosChart">Poměry všech osob - graf</label>
+	<label index="timetracking.view.TrackingsBySelection">Sledované hodiny vybraných projektů - graf</label>
+	<label index="timetracking.view.TrackingsBySelection.totalForAll">Celkový součet</label>
+	<label index="timetracking.requirement.person">Alespoň jedna osoba (nebo pracovní položka) musí být vybrána</label>
+	<label index="timetracking.requirement.project">Alespoň jeden projekt (nebo společnost) musí být vybrána</label>
+	<label index="estimatedTracked">Odhadovaný vs. sledovaný</label>
+	<label index="estimatedTracked.view.summaryPie">Poměr odhadovaného a sledovaného času - graf</label>
+	<label index="estimatedTracked.view.OvertimeBars">Odhadovaný / sledovaný čas - graf</label>
+	<label index="estimatedTracked.view.OvertimeBars.overtime">Přesčas</label>
+	<label index="estimatedTracked.view.OvertimeBars.timeLeftOver">Zbývající čas</label>
+	<label index="estimatedTracked.view.OvertimeBars.timeInRange">Sledovaný v rozsahu</label>
+	<label index="estimatedTracked.view.TaskDetails">Detaily pro jednotlivé úkoly</label>
+	<label index="estimatedTracked.view.TaskDetails.diff">Rozdíl</label>
+	<label index="number">Číslo</label>
+	<label index="customer">Zákazník</label>
+	<label index="project">Projekt</label>
+</labels>

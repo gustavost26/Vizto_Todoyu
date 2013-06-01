@@ -1,0 +1,37 @@
+todoyu dev extension changelog
+
+dev 1.3.0 - 2013-03-27
+	* Added: Display registered hooks, grouped by modified extension
+	* Added: Display registered cronjobs configs
+	* Changed: Simulate user selector does not list persons w/o company assignment anymore
+	* Changed: Improved headlet options order, added separated sections
+	* Changed: Dev headlet features are now configured by rights instead only accessible by admins
+
+dev 1.2.0 - 2012-05-03
+	* Feature: option to simulate session timeout
+	* Feature: User pref option to reroute emails
+	* Feature: Delete preferences for selected user from dev headlet
+	* Feature: Lazy load headlet content (saved 3000 lines of HTML code)
+	* Added: Data modifier hook dev,headlet.renderOverlayContent in TodoyuDevHeadletDevinfo::renderOverlayContent()
+	* Changed: Use dev.headlet.infos hook to add button to dev headlet
+	* Adapted to core 2.2
+
+dev 1.1.1 - 2011-11-17
+	* Bugfix: JS error in coherence with relogin popup
+	* Bugfix: Task clipboard not restored after user switch-back
+	* Bugfix: Redirect user if user simulation start in admin, but simulated user has no admin rights
+	* Added: Roles info of simulated person in switchback info
+	* Added: Removed simulated user info and switch-back button after relogin, added switch-back notification
+	* Added: Added roles/ companies to internal/external simulatable user option labels
+	* Added: Option to enable and run installer
+	* Added: View error log and installed extensions
+	* Added: Documentation URL
+	* Added: Allow cache clearing also in simulation mode
+	* Added: Close headlets on user switch
+	* Changed: Moved switchback info to right bottom to not cover content tabs
+	* Changed: Grouped simulatable users by internal/external
+	* Changed: Show notification instead of alert after user switch
+	* Changed: Adapted visual style (no more dotted lines)
+
+dev 1.0.0 - 2010-02-22
+	* Initial release

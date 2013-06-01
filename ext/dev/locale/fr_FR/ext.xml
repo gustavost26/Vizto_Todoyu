@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Extension de Développement</label>
+	<label index="extconf.is_dev">C'est l'installation DEV</label>
+	<label index="headlet.info.cache">Cache</label>
+	<label index="headlet.info.cache.clear">Supprimer les fichiers du cache</label>
+	<label index="headlet.info.is_admin">Est Admin</label>
+	<label index="headlet.info.login">Se connecter comme</label>
+	<label index="headlet.info.name">Nom</label>
+	<label index="headlet.info.rendertime">Dernier Rendu</label>
+	<label index="headlet.info.session">Session</label>
+	<label index="headlet.info.session.show">Voir les données de session</label>
+	<label index="headlet.info.switchBack">Revenir</label>
+	<label index="headlet.info.switchBack.button">Revenir à l'utilisateur réel</label>
+	<label index="headlet.info.user">Utilisateur</label>
+	<label index="notify.cachecleared">Cache Nettoyé</label>
+	<label index="tab">Serveur DEV !</label>
+</labels>

@@ -1,0 +1,41 @@
+<div class="report reportType{ucfirst $reporttype}" id="report-{$id}">
+
+	<h1 class="title headerLine" onclick="Todoyu.Ext.reporting.toggleFilters('{$id}')">
+		<span class="title first">
+			{$title}
+		</span>
+		<span class="rgt"><!-- right --></span>
+	</h1>
+
+	<form id="report-{$id}-filter" class="inlineFilters" method="post" onsubmit="return false;" action="index.php?ext=reporting&amp;controller=report" {if $toggled}style="display:none"{/if}>
+		<input type="hidden" name="report" value="{$id}" />
+		<input type="hidden" name="reporttype" value="{$reporttype}" />
+		{foreach $filters filter}
+			{$filter}
+		{/foreach}
+	</form>
+
+	{if $jumplist}
+		<ul id="report-{$id}-jumplist" class="jumplist">
+			{foreach $jumplist view}
+				<li onclick="Todoyu.Ext.reporting.ResultView.scrollTo('{$id}', '{$view.name}')">{$view.label}</li>
+			{/foreach}
+		</ul>
+	{/if}
+
+	{Button 'LLL:reporting.ext.refreshReport' 'Todoyu.Ext.reporting.refreshReport(null, null, true)' 'refreshButton' 'LLL:reporting.ext.refreshReport'}
+
+
+	<div class="results" id="report-{$id}-results">
+		{$resultViewList}
+	</div>
+
+</div>
+
+{if $jsInit}
+	<script type="text/javascript">
+	{foreach $jsInit init}
+		{$init}
+	{/foreach}
+	</script>
+{/if}

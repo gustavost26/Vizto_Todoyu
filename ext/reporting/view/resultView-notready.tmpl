@@ -1,0 +1,9 @@
+{contentMessage reporting.ext.resultView.notEnoughInformation  class='reportNotReady'}
+
+{if sizeof($requirements)}
+	<ul class="requirementList">
+		{foreach $requirements requirement}
+			<li>{Label $requirement}</li>
+		{/foreach}
+	</ul>
+{/if}

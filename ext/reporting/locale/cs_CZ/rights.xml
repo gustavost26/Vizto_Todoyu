@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="general">Obecné nastavení</label>
+	<label index="general.use">Používat modul pro reporty</label>
+	<label index="general.area">Přístup k oblasti reportů</label>
+	<label index="report">Použití reportů</label>
+	<label index="report.workloadperproject">Množství práce na projektu</label>
+	<label index="report.timetracking">Sledování času</label>
+	<label index="report.estimatedtracked">Odhadovaný vs. sledovaný čas</label>
+</labels>
