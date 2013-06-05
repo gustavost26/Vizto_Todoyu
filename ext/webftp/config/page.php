@@ -18,7 +18,6 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-if(  Todoyu::allowed('webftp', 'general:area') ) {
+if( TodoyuAuth::isAdmin() && Todoyu::allowed('webftp', 'general:area') ) {
 	TodoyuFrontend::addMenuEntry('webftp', 'webftp.ext.tab.label', 'index.php?ext=webftp', 50);
 }
-?>
