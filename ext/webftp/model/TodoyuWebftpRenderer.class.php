@@ -22,9 +22,16 @@
  * [Enter Class Description]
  *
  * @package		Todoyu
- * @subpackage	Reporting
+ * @subpackage	Webftp
  */
 class TodoyuWebftpRenderer {
+
+	/**
+	 * Extension key
+	 *
+	 * @var	String
+	 */
+	const EXTKEY = 'webftp';
 
 	/**
 	 * Render panel widgets for reporting area
@@ -32,7 +39,7 @@ class TodoyuWebftpRenderer {
 	 * @return	String
 	 */
 	public static function renderPanelWidgets() {
-		return TodoyuPanelWidgetRenderer::renderPanelWidgets('webftp');
+		return TodoyuPanelWidgetRenderer::renderPanelWidgets(self::EXTKEY);
 	}
 
 
@@ -44,7 +51,7 @@ class TodoyuWebftpRenderer {
 	 */
 	public static function renderReportTabs() {
 		$name		= 'webftp';
-		$jsHandler	= 'Todoyu.Ext.reporting.Tab.onSelect.bind(Todoyu.Ext.reporting.Tab)';
+		$jsHandler	= 'Todoyu.Ext.webftp.Tab.onSelect.bind(Todoyu.Ext.webftp.Tab)';
 		$tabs		= TodoyuReportingManager::getOpenReportTabs();
 		$active		= TodoyuReportingManager::getActiveReportID();
 
@@ -90,7 +97,7 @@ class TodoyuWebftpRenderer {
 	 * @return	String
 	 */
 	public static function renderNoReportFound() {
-		$tmpl	= 'ext/reporting/view/no-report.tmpl';
+		$tmpl	= PATH_EXT_WEBFTP.'/view/no-report.tmpl';
 		$data	= array();
 
 		return Todoyu::render($tmpl, $data);
