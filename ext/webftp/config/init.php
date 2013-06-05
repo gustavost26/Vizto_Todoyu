@@ -18,5 +18,5 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-
+//TodoyuPanelWidgetManager::addPanelWidget('webftp', 'webftp', 'ReportsList', 20);
 ?>
