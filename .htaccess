@@ -28,6 +28,11 @@ DirectoryIndex index.html index.php
 # Enable mod rewrite
 RewriteEngine on
 
+#主机名检测
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#删除www
+RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+
 # Disallow any .svn directory browsing
 RedirectMatch 403 /\\.svn(/|$)
 
