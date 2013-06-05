@@ -4,7 +4,6 @@
 {foreach $metatags metatag}
 	<meta {if $metatag.name}name="{$metatag.name}"{/if} {if $metatag.httpequiv}http-equiv="{$metatag.httpequiv}"{/if} content="{$metatag.content}" />
 {/foreach}
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,IE=EmulateIE9,IE=EmulateIE10,chrome=1" />
 	<title>{$pagetitle}</title>
 {foreach $cssFiles cssFile}
 	<link rel="stylesheet" type="text/css" href="{$cssFile.file}" media="{$cssFile.media}" />
