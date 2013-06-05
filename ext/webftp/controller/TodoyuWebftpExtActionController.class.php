@@ -48,9 +48,9 @@ class TodoyuWebftpExtActionController extends TodoyuActionController {
 
 		TodoyuPage::setTitle('webftp.ext.page.title');
 
-		$panelWidgets	= TodoyuReportingRenderer::renderPanelWidgets();
-		$reportTabs		= TodoyuReportingRenderer::renderReportTabs();
-		$content		= TodoyuReportingRenderer::renderActiveReport();
+		$panelWidgets	= TodoyuWebftpRenderer::renderPanelWidgets();
+		$reportTabs		= TodoyuWebftpRenderer::renderReportTabs();
+		$content		= TodoyuWebftpRenderer::renderActiveReport();
 
 		TodoyuPage::setTabs($reportTabs);
 		TodoyuPage::setPanelWidgets($panelWidgets);
