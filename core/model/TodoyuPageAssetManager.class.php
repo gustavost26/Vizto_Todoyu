@@ -641,7 +641,7 @@ class TodoyuPageAssetManager {
 						$mergeCode .= $fileCode;
 					}
 				}
-
+				Todoyu::$CONFIG['CACHE']['CSS']['global_compress'] && $mergeCode = self::compressStylesheet($mergeCode);
 					// Write content into file
 				TodoyuFileManager::saveFileContent($mergeFilePath, $mergeCode);
 			}
