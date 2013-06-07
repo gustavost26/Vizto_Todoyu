@@ -664,9 +664,9 @@ class TodoyuPageAssetManager {
 	 * @return	String
 	 */
 	private static function compressStylesheet($cssCode) {
-		require_once( PATH_LIB . '/php/cssmin.php' );
+		require_once( PATH_LIB . '/php/CssMin.php' );
 
-		return cssmin::minify($cssCode);
+		return CssMin::minify($cssCode);
 	}
 
 
