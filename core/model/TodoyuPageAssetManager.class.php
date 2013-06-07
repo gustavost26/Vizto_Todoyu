@@ -512,7 +512,7 @@ class TodoyuPageAssetManager {
 					'dirname' 	=> dirname($pathScss),
 					'basename'	=> TodoyuFileManager::getFileName($pathScss)
 			),
-			'style'			=> SassRenderer::STYLE_NESTED,
+			'style'			=> SassRenderer::STYLE_EXPANDED,
 			'cache'			=> false,
 			'syntax'		=> SassFile::SCSS,
 			'debug'			=> true,
