@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="general">General Settings</label>
+	<label index="general.use">Use/see reporting module functionality</label>
+	<label index="general.area">Access Reporting Area</label>
+	<label index="report">Use Report</label>
+	<label index="report.workloadperproject">Workload Per Project</label>
+	<label index="report.timetracking">Time Tracking</label>
+	<label index="report.estimatedtracked">Estimated vs. Tracked Time</label>
+</labels>

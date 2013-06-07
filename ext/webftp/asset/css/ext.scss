@@ -1,0 +1,15 @@
+@import "../../../../core/config/theme.scss";
+
+
+
+/* -------------------------
+	Tabs
+   -------------------------*/
+#contact-tabs {
+	.tabkey-person .icon {
+		background:url(../img/icons.png) no-repeat 0 6px;
+	}
+	.tabkey-company .icon {
+		background:url(../img/icons.png) no-repeat 0 -146px;
+	}
+}

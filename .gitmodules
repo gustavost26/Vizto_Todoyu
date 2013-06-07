@@ -1,0 +1,3 @@
+[submodule "lib/php/phpsass"]
+	path = lib/php/phpsass
+	url = git://github.com/PHNR/phpsass.git
