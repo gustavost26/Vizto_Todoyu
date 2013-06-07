@@ -35,11 +35,13 @@
 }
 
 #panelwidget-fileoperation button {
-	&.cut .icon { background: url(../img/cut.gif) no-repeat 8px 2px; width: 25px; }
-	&.copy .icon { background: url(../img/copy.gif) no-repeat 8px 2px; width: 25px; }
-	&.paste .icon { background: url(../img/paste.gif) no-repeat 8px 2px; width: 25px; }
-	&.select .icon { background: url(../img/select.gif) no-repeat 8px 2px; width: 25px; }
-	&.copy .icon { background: url(../img/copy.gif) no-repeat 8px 2px; width: 25px; }
-	&.copy .icon { background: url(../img/copy.gif) no-repeat 8px 2px; width: 25px; }
-	&.copy .icon { background: url(../img/copy.gif) no-repeat 8px 2px; width: 25px; }
+	.icon { width: 25px; background-position: 8px 2px; background-repeat: no-repeat; }
+	&.cut .icon { background-image: url(../img/cut.gif); }
+	&.copy .icon { background-image: url(../img/copy.gif); }
+	&.paste .icon { background-image: url(../img/paste.gif); }
+	&.select .icon { background-image: url(../img/select.gif); }
+	&.copy .icon { background-image: url(../img/copy.gif); }
+	&.copy .icon { background-image: url(../img/copy.gif); }
+	&.copy .icon { background-image: url(../img/copy.gif); }
 }
+/*----------------------------------------------lswepigjpwegij----------------------------------------------*/

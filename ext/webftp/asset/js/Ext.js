@@ -22,9 +22,9 @@
  */
 
 /**
- * Main tutorial object
+ * Main webftp object
  *
- * @class		tutorial
+ * @class		webftp
  * @namespace	Todoyu.Ext
  */
 Todoyu.Ext.webftp = {

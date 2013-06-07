@@ -2,14 +2,16 @@
 
 
 
-/* -------------------------
-	Tabs
-   -------------------------*/
-#contact-tabs {
-	.tabkey-person .icon {
-		background:url(../img/icons.png) no-repeat 0 6px;
+/* -------------------------Tabs------------------------- */
+#webftp-tabs {
+	.icon { background-position: 0 200px; background-image: url(../img/icons.png); }
+	.tabkey-icon .icon {
+		background-position: 0 -1px;
 	}
-	.tabkey-company .icon {
-		background:url(../img/icons.png) no-repeat 0 -146px;
+	.tabkey-list .icon {
+		background-position: 0 -544px;
 	}
 }
+
+/*
+*/
