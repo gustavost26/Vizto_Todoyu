@@ -370,7 +370,7 @@ class TodoyuPageAssetManager {
 	 * @return	String
 	 */
 	public static function compressJavaScript($javaScriptCode) {
-		require_once( PATH_LIB . '/php/jsmin.php' );
+		require_once( PATH_LIB . '/php/JSMin.php' );
 
 		try {
 			return JSMin::minify($javaScriptCode);
