@@ -44,6 +44,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.PATH);
 set_include_path(get_include_path().PATH_SEPARATOR.PATH_PEAR);
 
 // Load dwoo
+include(PATH_CORE.'/model/dwoo/plugins.php');
 include(PATH_LIB.'/php/dwoo/dwooAutoload.php');
 
 // Load basic classes
@@ -63,12 +64,17 @@ include(PATH_LIB.'/php/FirePHPCore/FirePHP.class.php');
 
 // Register autoloader
 spl_autoload_register(array('TodoyuAutoloader', 'load'));
+include(PATH_CORE.'/inc/version.php');
 
 // Register error handler
 set_error_handler(array('TodoyuErrorHandler', 'handleError'));
 
-// Load global functions
-include(PATH_CORE.'/inc/version.php');
+// Load global functions @todo: Only load dwoo plugins when needed
+include(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrict.php');
+include(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrictAdmin.php');
+include(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrictIfNone.php');
+include(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrictOrOwn.php');
+include(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrictInternal.php');
 
 // Include strptime function if not defined on windows
 if(!function_exists('strptime')) {
@@ -95,5 +101,3 @@ require_once(PATH_LOCALCONF.'/config.php');
 
 // Load extconf
 TodoyuExtensions::loadExtConf();
-
-?>
