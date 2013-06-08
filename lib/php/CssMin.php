@@ -4552,7 +4552,7 @@ class CssAtImportParserPlugin extends aCssParserPlugin {
 			if($pos) {
 				$this->parser->appendToken(new CssAtImportToken($import, $mediaTypes));
 			} else {
-				CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__.': Invalid @import at-rule syntax', $this->parser->buffer));
+				CssMin::triggerError(new CssError(__FILE__, __LINE__, __METHOD__.': Invalid @import at-rule syntax', /*尝试修改这里,原为$this->parser->buffer*/$this->parser->getBuffer()));
 			}
 			$this->parser->popState();
 		} else {
