@@ -2,4 +2,6 @@
 <labels>
 	<label index="ext.title">Webftp</label>
 	<label index="tab.label">Webftp</label>
+	<label index="icon">图标</label>
+	<label index="list">列表</label>
 </labels>

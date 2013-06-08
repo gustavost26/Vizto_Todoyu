@@ -7,8 +7,8 @@
 	<label index="basic.clearCache">Cache löschen</label>
 	<label index="basic.rerouteEmail">Emails umleiten</label>
 	<label index="basic.activateInstaller">Installer aktivieren</label>
-	<label index="basic.sessionTimeout">Session Timeout</label>
-	<label index="user">User</label>
+	<label index="basic.sessionTimeout">会话超时</label>
+	<label index="user">用户</label>
 	<label index="user.loginAs">Login as User</label>
-	<label index="user.deletePreferences">Delete user preferences</label>
+	<label index="user.deletePreferences">删除用户权限配置</label>
 </labels>
