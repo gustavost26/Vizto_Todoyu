@@ -69,14 +69,6 @@ set_error_handler(array('TodoyuErrorHandler', 'handleError'));
 
 // Load global functions
 include(PATH_CORE.'/inc/version.php');
-include(PATH_CORE.'/model/dwoo/plugins.php');
-spl_autoload_register('dwoo_Autoload');
-function dwoo_Autoload($class) {
-	if(substr($class, 0, 20) === 'Dwoo_Plugin_restrict') {
-		$file = PATH_CORE.'/model/dwoo/'.$class.'.php';
-		is_file($file) && include($file);
-	}
-}
 
 // Include strptime function if not defined on windows
 if(!function_exists('strptime')) {
