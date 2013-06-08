@@ -17,7 +17,7 @@
  *
  * This copyright notice MUST APPEAR in all copies of the script.
  *****************************************************************************/
-ini_set('memory_limit', '196M');
+@ini_set('memory_limit', '196M');
 // Set session cookie HTTP only
 @ini_set('session.cookie_httponly', 1);
 // Force long session data lifetime (5 hours)
