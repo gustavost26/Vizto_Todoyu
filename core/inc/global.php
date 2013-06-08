@@ -47,27 +47,11 @@ set_include_path(get_include_path().PATH_SEPARATOR.PATH_PEAR);
 require_once(PATH_LIB.'/php/dwoo/dwooAutoload.php');
 
 // Load basic classes
-require_once(PATH_CORE.'/model/Todoyu.class.php');
-require_once(PATH_CORE.'/model/TodoyuDatabase.class.php');
-require_once(PATH_CORE.'/model/TodoyuAuth.class.php');
-require_once(PATH_CORE.'/model/TodoyuBaseObject.class.php');
-require_once(PATH_CORE.'/model/TodoyuExtensions.class.php');
-require_once(PATH_CORE.'/model/TodoyuSession.class.php');
-require_once(PATH_CORE.'/model/TodoyuLabelManager.class.php');
-require_once(PATH_CORE.'/model/TodoyuCache.class.php');
-require_once(PATH_CORE.'/model/TodoyuLogger.class.php');
-require_once(PATH_CORE.'/model/TodoyuRequest.class.php');
-require_once(PATH_CORE.'/model/TodoyuActionController.class.php');
-require_once(PATH_CORE.'/model/TodoyuActionDispatcher.class.php');
-require_once(PATH_CORE.'/model/TodoyuArray.class.php');
-require_once(PATH_CORE.'/model/TodoyuPreferenceManager.class.php');
-require_once(PATH_CORE.'/model/TodoyuFileManager.class.php');
-require_once(PATH_CORE.'/model/TodoyuRightsManager.class.php');
-require_once(PATH_CORE.'/model/TodoyuHookManager.class.php');
-require_once(PATH_CORE.'/model/TodoyuHeader.class.php');
-require_once(PATH_CORE.'/model/TodoyuPanelWidgetManager.class.php');
-require_once(PATH_CORE.'/model/TodoyuErrorHandler.class.php');
-require_once(PATH_CORE.'/model/TodoyuAutoloader.class.php');
+spl_autoload_register('__Core_Autoloader');
+function __Core_Autoloader($class) {
+	$file = PATH_CORE.'/model/'.$class.'.class.php';
+	is_file($file) && require_once($file);
+}
 
 // Include basic person classes
 require_once(PATH_EXT.'/contact/model/TodoyuContactPerson.class.php');
@@ -75,7 +59,6 @@ require_once(PATH_EXT.'/contact/model/TodoyuContactPersonManager.class.php');
 require_once(PATH_EXT.'/contact/model/TodoyuContactPreferences.class.php');
 
 // Load development classes
-require_once(PATH_CORE.'/model/TodoyuDebug.class.php');
 require_once(PATH_LIB.'/php/FirePHPCore/FirePHP.class.php');
 
 // Register autoloader
@@ -84,14 +67,16 @@ spl_autoload_register(array('TodoyuAutoloader', 'load'));
 // Register error handler
 set_error_handler(array('TodoyuErrorHandler', 'handleError'));
 
-// Load global functions @todo: Only load dwoo plugins when needed
+// Load global functions
 require_once(PATH_CORE.'/inc/version.php');
 require_once(PATH_CORE.'/model/dwoo/plugins.php');
-require_once(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrict.php');
-require_once(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrictAdmin.php');
-require_once(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrictIfNone.php');
-require_once(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrictOrOwn.php');
-require_once(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrictInternal.php');
+spl_autoload_register('dwoo_Autoload');
+function dwoo_Autoload($class) {
+	if(substr($class, 0, 20) === 'Dwoo_Plugin_restrict') {
+		$file = PATH_CORE.'/model/dwoo/'.$class.'.php';
+		is_file($file) && require_once($file);
+	}
+}
 
 // Include strptime function if not defined on windows
 if(!function_exists('strptime')) {
