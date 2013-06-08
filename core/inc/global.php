@@ -36,7 +36,7 @@ session_start();
 
 
 // Define basic constants
-require_once(dirname(dirname(__FILE__)).'/config/constants.php');
+include(dirname(dirname(__FILE__)).'/config/constants.php');
 
 // Add todoyu include path
 set_include_path(get_include_path().PATH_SEPARATOR.PATH);
@@ -44,22 +44,22 @@ set_include_path(get_include_path().PATH_SEPARATOR.PATH);
 set_include_path(get_include_path().PATH_SEPARATOR.PATH_PEAR);
 
 // Load dwoo
-require_once(PATH_LIB.'/php/dwoo/dwooAutoload.php');
+include(PATH_LIB.'/php/dwoo/dwooAutoload.php');
 
 // Load basic classes
 spl_autoload_register('__Core_Autoloader');
 function __Core_Autoloader($class) {
 	$file = PATH_CORE.'/model/'.$class.'.class.php';
-	is_file($file) && require_once($file);
+	is_file($file) && include($file);
 }
 
 // Include basic person classes
-require_once(PATH_EXT.'/contact/model/TodoyuContactPerson.class.php');
-require_once(PATH_EXT.'/contact/model/TodoyuContactPersonManager.class.php');
-require_once(PATH_EXT.'/contact/model/TodoyuContactPreferences.class.php');
+include(PATH_EXT.'/contact/model/TodoyuContactPerson.class.php');
+include(PATH_EXT.'/contact/model/TodoyuContactPersonManager.class.php');
+include(PATH_EXT.'/contact/model/TodoyuContactPreferences.class.php');
 
 // Load development classes
-require_once(PATH_LIB.'/php/FirePHPCore/FirePHP.class.php');
+include(PATH_LIB.'/php/FirePHPCore/FirePHP.class.php');
 
 // Register autoloader
 spl_autoload_register(array('TodoyuAutoloader', 'load'));
@@ -68,13 +68,13 @@ spl_autoload_register(array('TodoyuAutoloader', 'load'));
 set_error_handler(array('TodoyuErrorHandler', 'handleError'));
 
 // Load global functions
-require_once(PATH_CORE.'/inc/version.php');
-require_once(PATH_CORE.'/model/dwoo/plugins.php');
+include(PATH_CORE.'/inc/version.php');
+include(PATH_CORE.'/model/dwoo/plugins.php');
 spl_autoload_register('dwoo_Autoload');
 function dwoo_Autoload($class) {
 	if(substr($class, 0, 20) === 'Dwoo_Plugin_restrict') {
 		$file = PATH_CORE.'/model/dwoo/'.$class.'.php';
-		is_file($file) && require_once($file);
+		is_file($file) && include($file);
 	}
 }
 
