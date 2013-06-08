@@ -19,4 +19,23 @@
 *****************************************************************************/
 
 //TodoyuPanelWidgetManager::addPanelWidget('webftp', 'webftp', 'ReportsList', 20);
-?>
+
+Todoyu::$CONFIG['EXT']['webftp'] = array(
+	'defaultTab'	=> 'icon',
+	'tabs' => array(
+		'icon'	=> array(
+			'key'		=> 'icon',
+			'id'		=> 'icon',
+			'label'		=> 'webftp.ext.icon',
+			'require'	=> 'webftp.general:area',
+			'position'	=> 105
+		),
+		'list'	=> array(
+			'key'		=> 'list',
+			'id'		=> 'list',
+			'label'		=> 'webftp.ext.list',
+			'require'	=> 'webftp.general:area',
+			'position'	=> 110
+		)
+	),
+);

@@ -16,15 +16,18 @@ Todoyu::$CONFIG['EXT']['webftp']['assets'] = array(
 	),
 	'css' => array(
 		array(
-			'file'		=> 'ext/webftp/asset/css/ext.css',
-			'media'		=> 'all'
+			'file'		=> 'ext/webftp/asset/css/ext.scss',
+			'media'		=> 'all',
+			'position'  => 105,
+			'merge'		=> true,
+			'compress'	=> true
 		),
 		array(
 			'file'		=> 'ext/webftp/asset/css/panelwidget-fileoperation.scss',
 			'media'		=> 'all',
-			'opsition'  => 110
+			'position'  => 110,
+			'merge'		=> true,
+			'compress'	=> true
 		)
 	)
 );
-
-?>
