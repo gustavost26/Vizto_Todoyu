@@ -17,6 +17,22 @@
  *
  * This copyright notice MUST APPEAR in all copies of the script.
  *****************************************************************************/
+// Define basic constants
+include(dirname(dirname(__FILE__)).'/config/constants.php');
+
+// Load development classes
+include(PATH_LIB.'/php/FirePHPCore/FirePHP.class.php');
+
+// Load basic classes
+spl_autoload_register('__Core_Autoloader');
+function __Core_Autoloader($class) {
+	$file = PATH_CORE.'/model/'.$class.'.class.php';
+	is_file($file) && include($file);
+}
+
+// Register error handler
+set_error_handler(array('TodoyuErrorHandler', 'handleError'));
+
 @ini_set('memory_limit', '196M');
 // Set session cookie HTTP only
 @ini_set('session.cookie_httponly', 1);
@@ -35,8 +51,6 @@ date_default_timezone_set('Europe/Paris');
 session_start();
 
 
-// Define basic constants
-include(dirname(dirname(__FILE__)).'/config/constants.php');
 
 // Add todoyu include path
 set_include_path(get_include_path().PATH_SEPARATOR.PATH);
@@ -47,27 +61,16 @@ set_include_path(get_include_path().PATH_SEPARATOR.PATH_PEAR);
 include(PATH_CORE.'/model/dwoo/plugins.php');
 include(PATH_LIB.'/php/dwoo/dwooAutoload.php');
 
-// Load basic classes
-spl_autoload_register('__Core_Autoloader');
-function __Core_Autoloader($class) {
-	$file = PATH_CORE.'/model/'.$class.'.class.php';
-	is_file($file) && include($file);
-}
 
 // Include basic person classes
 include(PATH_EXT.'/contact/model/TodoyuContactPerson.class.php');
 include(PATH_EXT.'/contact/model/TodoyuContactPersonManager.class.php');
 include(PATH_EXT.'/contact/model/TodoyuContactPreferences.class.php');
 
-// Load development classes
-include(PATH_LIB.'/php/FirePHPCore/FirePHP.class.php');
-
 // Register autoloader
 spl_autoload_register(array('TodoyuAutoloader', 'load'));
 include(PATH_CORE.'/inc/version.php');
 
-// Register error handler
-set_error_handler(array('TodoyuErrorHandler', 'handleError'));
 
 // Load global functions @todo: Only load dwoo plugins when needed
 include(PATH_CORE.'/model/dwoo/Dwoo_Plugin_restrict.php');
