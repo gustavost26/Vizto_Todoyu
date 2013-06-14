@@ -48,9 +48,12 @@ class TodoyuWebftpExtActionController extends TodoyuActionController {
 
 		TodoyuPage::setTitle('webftp.ext.page.title');
 
+		// Get given tab parameter or load preference
+		$activeTab	= ( ! empty($params['tab']) ) ? $params['tab'] : TodoyuWebftpPreferences::getActiveTab();
+
 		$panelWidgets	= TodoyuWebftpRenderer::renderPanelWidgets();
-		$reportTabs		= TodoyuWebftpRenderer::renderReportTabs();
-		$content		= TodoyuWebftpRenderer::renderActiveReport();
+		$reportTabs		= TodoyuWebftpRenderer::renderViewTabs($activeTab);
+		$content		= TodoyuWebftpRenderer::renderContent();
 
 		TodoyuPage::setTabs($reportTabs);
 		TodoyuPage::setPanelWidgets($panelWidgets);

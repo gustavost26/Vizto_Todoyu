@@ -1,0 +1,7 @@
+{
+	"name": "Bozz/Todoyu",
+	"require": {
+		"php": ">=5.2.4",
+		"another-vendor/package": "1.*"
+	}
+}
