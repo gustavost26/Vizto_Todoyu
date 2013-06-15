@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rights>
-
-	<section name="general">
-		<right name="use" />
-		<right name="area" require="general:use" />
-	</section>
-
-</rights>

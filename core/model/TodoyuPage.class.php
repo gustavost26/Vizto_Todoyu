@@ -67,7 +67,6 @@ class TodoyuPage {
 
 		self::addMetatag('', 'text/html; charset=utf-8', 'content-type');
 		self::addMetatag('robots', 'noindex,nofollow');
-		self::addMetatag('', 'IE=EmulateIE7,IE=EmulateIE9,IE=EmulateIE10,chrome=1', 'X-UA-Compatible');//增加IE模式逻辑
 
 		self::addJsInit('Todoyu.init()', 1);
 	}

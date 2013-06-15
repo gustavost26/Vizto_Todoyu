@@ -1,6 +1,0 @@
-{foreach $infos info}
-	<li{if !empty($info.id)} id="{$info.id}"{/if} class="{if !empty($info.class)}{$info.class}{/if}">
-		<span class="key">{Label $info.label}</span>
-		<span class="value">{$info.value}</span>
-	</li>
-{/foreach}

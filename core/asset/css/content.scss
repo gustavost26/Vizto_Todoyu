@@ -29,7 +29,7 @@ div.icon {
 .contentMessage {
 	clear:both;
 	padding:10px;
-	background-color:$white;
+	background-color:$colorCorporate02;
 	margin-bottom:5px;
 
 	div.icon,
@@ -135,13 +135,13 @@ div.infoBox {
 
 	label {
 		text-transform:uppercase;
-		font-size:12px;
+		font-size:10px;
 		letter-spacing:0.3px; }
 
 	th,
 	&OptLine th {
 		font: {
-			size:12px;
+			size:11px;
 			weight:normal; }
 		text-transform:uppercase;
 		white-space:nowrap;

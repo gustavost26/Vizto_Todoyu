@@ -370,7 +370,7 @@ class TodoyuPageAssetManager {
 	 * @return	String
 	 */
 	public static function compressJavaScript($javaScriptCode) {
-		require_once( PATH_LIB . '/php/JSMin.php' );
+		require_once( PATH_LIB . '/php/jsmin.php' );
 
 		try {
 			return JSMin::minify($javaScriptCode);
@@ -512,7 +512,7 @@ class TodoyuPageAssetManager {
 					'dirname' 	=> dirname($pathScss),
 					'basename'	=> TodoyuFileManager::getFileName($pathScss)
 			),
-			'style'			=> SassRenderer::STYLE_EXPANDED,
+			'style'			=> SassRenderer::STYLE_NESTED,
 			'cache'			=> false,
 			'syntax'		=> SassFile::SCSS,
 			'debug'			=> true,
@@ -664,9 +664,9 @@ class TodoyuPageAssetManager {
 	 * @return	String
 	 */
 	private static function compressStylesheet($cssCode) {
-		require_once( PATH_LIB . '/php/CssMin.php' );
+		require_once( PATH_LIB . '/php/cssmin.php' );
 
-		return CssMin::minify($cssCode);
+		return cssmin::minify($cssCode);
 	}
 
 

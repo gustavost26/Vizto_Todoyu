@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<labels>
-	<label index="title">Moje reporty</label>
-	<label index="saveAsNew">Uložit jako nový report</label>
-	<label index="saveCurrent">Uložit report</label>
-	<label index="newReportName">Jméno reportu</label>
-	<label index="overwriteReport">Přepsat report?</label>
-	<label index="deleteReport">Smazat tento report?</label>
-</labels>
